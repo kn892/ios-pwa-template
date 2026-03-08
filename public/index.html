@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>PWA Template</title>
+  <meta name="description" content="iOS対応のProgressive Web Appテンプレート">
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Apple PWA メタタグ -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="PWA Template">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#0a0a1a">
+
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/icons/icon-512x512.png">
+
+  <!-- スタイルシート -->
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="app-header">
+    <h1>🚀 PWA Template</h1>
+    <span class="header-badge" id="modeBadge">読み込み中...</span>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main class="app-content">
+
+    <!-- ヒーローセクション -->
+    <section class="hero fade-in">
+      <div class="hero-icon">🌐</div>
+      <h2>iOS PWA テンプレート</h2>
+      <p>Push通知対応・オフラインキャッシュ・フルスクリーン表示が可能なPWAテンプレートです</p>
+    </section>
+
+    <!-- ステータスカード -->
+    <section class="status-grid fade-in">
+      <div class="status-card">
+        <div class="status-card-header">
+          <span class="status-card-title">📱 動作モード</span>
+          <span class="status-indicator pending" id="modeIndicator">
+            <span class="dot"></span>
+            <span id="modeText">検出中</span>
+          </span>
+        </div>
+        <div class="status-value" id="modeValue">—</div>
+      </div>
+
+      <div class="status-card">
+        <div class="status-card-header">
+          <span class="status-card-title">⚙️ Service Worker</span>
+          <span class="status-indicator pending" id="swIndicator">
+            <span class="dot"></span>
+            <span id="swText">確認中</span>
+          </span>
+        </div>
+        <div class="status-value" id="swValue">—</div>
+      </div>
+
+      <div class="status-card">
+        <div class="status-card-header">
+          <span class="status-card-title">🔔 Push通知</span>
+          <span class="status-indicator pending" id="pushIndicator">
+            <span class="dot"></span>
+            <span id="pushText">未確認</span>
+          </span>
+        </div>
+        <div class="status-value" id="pushValue">—</div>
+      </div>
+
+      <div class="status-card">
+        <div class="status-card-header">
+          <span class="status-card-title">🌐 ネットワーク</span>
+          <span class="status-indicator pending" id="networkIndicator">
+            <span class="dot"></span>
+            <span id="networkText">確認中</span>
+          </span>
+        </div>
+        <div class="status-value" id="networkValue">—</div>
+      </div>
+    </section>
+
+    <!-- アクションボタン -->
+    <section class="action-section fade-in">
+      <h3>アクション</h3>
+
+      <button class="btn btn-primary" id="notifyBtn" disabled>
+        🔔 Push通知を有効にする
+      </button>
+
+      <button class="btn btn-secondary" id="testNotifyBtn" disabled>
+        📨 テスト通知を送信
+      </button>
+
+      <button class="btn btn-secondary" id="cacheBtn">
+        💾 キャッシュ状況を確認
+      </button>
+    </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="app-footer">
+    <p>iOS PWA Template &copy; 2026</p>
+    <p>Service Worker + Web Push + Offline Cache</p>
+  </footer>
+
+  <!-- インストールバナー（iOS Safari専用） -->
+  <div class="install-banner" id="installBanner">
+    <div class="install-banner-content">
+      <h4>📲 ホーム画面に追加</h4>
+      <p>アプリとしてインストールすると、フルスクリーン表示やPush通知が利用できます</p>
+      <div class="install-steps">
+        <div class="install-step">
+          <span class="step-icon">⬆️</span>
+          <span>共有ボタンをタップ</span>
+        </div>
+        <div class="install-step">
+          <span class="step-icon">➕</span>
+          <span>「ホーム画面に追加」を選択</span>
+        </div>
+      </div>
+      <div class="banner-actions">
+        <button class="btn btn-primary" id="dismissBanner">OK、わかりました</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

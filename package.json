@@ -1,0 +1,13 @@
+{
+    "name": "ios-pwa-template",
+    "version": "1.0.0",
+    "description": "iOS対応 PWA テンプレート",
+    "type": "module",
+    "scripts": {
+        "dev": "node server.js",
+        "tunnel": "ngrok http 3000"
+    },
+    "dependencies": {
+        "express": "^5.1.0"
+    }
+}
