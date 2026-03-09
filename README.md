@@ -3,6 +3,26 @@
 iOS対応のProgressive Web App（PWA）テンプレートです。  
 Service Worker、Web Push通知、オフラインキャッシュ、Apple独自メタタグを完備しています。
 
+## テンプレートとして使う
+
+```bash
+# degit でクローン（.git なし）
+pnpm dlx degit kn892/webPush my-pwa-app
+cd my-pwa-app
+pnpm install
+```
+
+または GitHub UI の「**Use this template**」ボタンからリポジトリを作成。
+
+### カスタマイズ箇所
+
+| ファイル | 変更箇所 |
+|---------|---------|
+| `package.json` | `name` |
+| `public/manifest.json` | `name`, `short_name`, `description`, `theme_color` |
+| `public/index.html` | `<title>`, `apple-mobile-web-app-title`, `theme-color`, ヒーローセクションのテキスト |
+| `public/icons/` | アプリ固有のアイコン画像に差し替え |
+
 ## セットアップ
 
 ```bash
